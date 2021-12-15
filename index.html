@@ -1,0 +1,239 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Household services, home services, cleaning, shopping, plumbing, hservices">
+    <meta name="description" content="HServices - A platform where householder can find contractors for their problems and vice-versa">
+    <title>HOME</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+    <script  type="text/javascript" src="js/jquery.js" defer=""></script>
+    
+	<link rel="stylesheet" href="css/stylesheet.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link id="u-theme-google-font" rel="stylesheet" 
+	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="HOME">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+
+	<div class="header">
+		<div class="logo">
+			<a href="home.html"><img src="images/HSERVICES2.png" alt="logo"></a>
+		</div>
+		<div class="navbar">
+			<div class="icon-bar" onclick="Show()">
+		<i></i>
+		<i></i>
+		<i></i>
+		</div>
+
+			<ul id="nav-lists">
+			<li class="close"><span onclick="Hide()">×</span></li>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="customer.html">Customer</a></li>
+			<li><a href="contractor.html">Contractor</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="login/userlogin.html" class="login">Login</a></li>
+			</ul>
+		</div>
+		</div>
+	<div class="image-block">
+		
+		<!-- <img src="images/jeshoots-com-__ZMnefoI3k-unsplash.jpg" style="width:100%"> -->
+		<div class="centered">
+		<h1>No need to worry</h1>
+		<p>HServices will help you find a reliable contractor for any task in just five clicks</p>
+		</div>
+		<a class="image-btn" href="about.html" style="text-decoration: none;">Read More</a>
+		
+	</div>
+	<div class="blankspace"></div>
+	<h2 style="text-align: center;" class="animate__animated animate__zoomInDown"> Services</h2>
+	<div class="services">
+	<div class="row">
+	<div class="column">
+	<ul>
+		<li><a href="#">General Cleaning</a></li>
+		<li><a href="#">Window cleaning</a></li>
+		<li><a href="#">Garbage removal</a></li>
+		<li><a href="#">Corporative services</a></li>
+	</ul>
+	</div>
+	<div class="column">
+	<ul>
+		<li><a href="#">Seamstress </a></li>
+		<li><a href="#">Ironing</a></li>
+		<li><a href="#">Dry cleaning</a></li>
+		<li><a href="#">Cooking</a></li>
+	</ul>
+	</div>
+	<div class="column">
+	<ul>
+		<li><a href="#">Animal care</a></li>
+		<li><a href="#">Gardening </a></li>
+		<li><a href="#">Plumbing</a></li>
+		<li><a href="#">Electrician</a></li>
+	</ul>
+	</div>
+	</div>
+	<a href="customer.html" class="more-services">All services</a>
+	</div>
+	<div class="blankspace"></div>
+	<div class="section-3">
+	<div class="blankspace"></div>
+	<h2 style="text-align: center;">More than 2,300,000 contractors<br>are ready to help you solve a wide variety of tasks</h2>
+	<div class="container-1">
+	<div class="row">
+	<div class=" column card_section">
+	<div class="card_img">
+	<img src="images/payment.png">
+	</div>
+	<div class="card_info">
+	<h4>Secure payment</h4>
+	<p>When paying through our Risk-free Transaction, HServices will refund the money if something goes wrong</p>
+	</div>
+	</div>
+	<div class=" column card_section">
+	<div class="card_img">
+	<img src="images/specialist.jpg">
+	</div>
+	<div class="card_info">
+	<h4>Reliable contractors</h4>
+	<p>All our contractors/service providers have confirmed their expertise with documents</p>
+	</div>
+	</div>
+	<div class=" column card_section">
+	<div class="card_img">
+	<img src="images/review2.png">
+	</div>
+	<div class="card_info">
+	<h4>Reviews</h4>
+	<p>More than 1,000,000 customer reviews will help you choose the right contractor</p>
+	</div>
+	</div>
+	
+	</div>
+	
+	</div>
+	<div class="blankspace"></div>
+	</div>
+	<div class="blankspace"></div>
+	<div class="form-section">
+	<div class="row-3">
+	<div class="column-3 left-side">
+	<div class="get-in-touch">
+	<h2 class="animate__animated animate__swing"> Get In Touch Now! </h2>
+	<p style="text-align: justify;">Get in touch with your enquiry. Fill out the form and we'll get back to you ASAP. Alternatively, message us on one of our social media platforms or visit our our office.</p>
+	</div>
+	</div>
+	<div class="column-3 right-side">
+		<div class="contact-form">
+		<form onsubmit="validate()" action="send.php" method="post">
+		
+		<div class="row-4">
+		<div class="col-25">
+        <label for="fname">First Name</label>
+		</div>
+		<div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required />
+		</div>
+		</div>
+		<div class="row-4">
+		<div class="col-25">
+        <label for="lname">Last Name</label>
+		</div>
+		<div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required />
+		</div>
+		</div>
+		<div class="row-4">
+		<div class="col-25">
+        <label for="email">Email</label>
+		</div>
+		<div class="col-75">
+        <input type="text" id="email" name="email" placeholder="Your email address.." required />
+		</div>
+		</div>
+		<div class="row-4">
+		<div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+		<div class="col-75">
+        <select id="subject" name="subject">
+          <option value="request">Request</option>
+          <option value="registration">Registration</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </div>
+		</div>
+		<div class="row-4">
+		<div class="col-25">
+        <label for="message">Message</label>
+		</div>
+      <div class="col-75">
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required ></textarea>
+      </div>
+		</div>
+		<br>
+		
+		<div class="row-4">
+		<input type="submit" name="submit" value="Send">
+		</div>
+		</form>
+		</div>
+	</div>
+
+	</div>
+	<div class="separator">
+  <span class="separator-text"></span>
+</div>
+	<div class="quick-links">
+	<div class="row-2">
+	<div class="links">
+	<div class="column-2">
+	<ul>
+	<li><a href="about.html" target="_blank">Looking for service providers</a></li>
+	<li><a href="contractor.html" target="_blank">Become a contractor</a></li>
+	<li><a href="policy.html" target="_blank">Terms of use of the site</a></li>
+	<li><a href="customer.html" target="_blank">Services</a></li>
+	
+	</ul>
+	</div></div>
+	<div class="contact-details">
+	<div class="column-2">
+	<div class="blankspace" id="id-123"></div>
+	<i class="fa fa-phone" style="font-size: 28px; color: #55ACEE;"></i>
+	<sup><a href="#" style="font-size: 20px; text-decoration: none; color: black;">+243 (997) 54-46-03</a></sup><br>
+	<i class="fa fa-envelope" style="font-size:28px; color: #55ACEE;"></i> 
+	<a href="mailto:info@hservices.com" style="font-size: 20px; text-decoration: none; color: black;"> &nbsp; info@hservices.com</a></sup>
+	<div class="blankspace"></div>
+	<div class="social-links">
+	<a href="#" class="fa fa-facebook" style="margin-left:5%;"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<a href="#" class="fa fa-instagram"></a>
+	
+	</div>
+	</div></div></div></div>
+	<div class="blankspace" id="id-123"></div>
+	
+	
+	<footer>
+	<p> 
+		© HServices 2021 All rights reserved<br>This website supports the browsers Google Chrome, Firefox, Safari and Edge.<span style="font-size: 1rem;"></span>
+        </p>
+	</footer>
+	
+	<script type="text/javascript" src="js/script.js"></script>
+	</body>
+	
+</html>

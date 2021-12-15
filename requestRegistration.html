@@ -1,0 +1,67 @@
+<! DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<!-- <link href="css/animate.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/requestReg.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<!-- <script src="css/jquery-min.js"></script> -->
+	
+	
+
+	
+	</head>
+	<body>
+	<div class="space"></div>
+	<div class="container" >
+	<div class="row">
+	<div class="column"> 
+	
+	<h1 > Registration form for Householder</h1>
+	<form action="requestreg.php" method="post" enctype="multipart/form-data" name="form1" onsubmit="validate()" >
+	<label for ="firstname"> Firstname </label>
+	<input name="firstname" type="text" id="firstname"    required /> <br> <br>
+	<label for ="lastname"> Lastname </label>
+	<input name="lastname" type="text" id="lastname"   required /> <br> <br>
+	<label for ="email"> Email address </label>
+	<input name="email" type="text" id="email"  required /> <br> <br>
+	<label for ="address"> Address </label>
+	<input name="address" type="text"  required /> <br> <br>
+	<label for ="file"> ID card </label>
+	<input name="file" type="file" accept="image/*, .pdf" required /> <br> <br>
+	<button name="submit" value="submit">Request Registration</button>
+	
+	</form>
+	</div>
+	<div class="column">
+	<h1 >Registration form for Service Provider</h1>
+	<form name="form2" onsubmit = "validateForm2()" action="req.php" method="post" enctype="multipart/form-data">
+	<label for ="firstname"> Firstname </label>
+	<input name="firstname" type="text" id="firstName" required /> <br> <br>
+	<label for ="lastname"> Lastname </label>
+	<input name="lastname" type="text" id="lastName"  required /> <br> <br>
+	<label for ="email"> Email address </label>
+	<input name="email" type="text" id="Email"  required /> <br> <br>
+	<label for ="address"> Address </label>
+	<input name="address" type="text"  required /> <br> <br>
+	<label for ="file"> ID card </label>
+	<input name="file" type="file" accept="image/*, .pdf" required /> <br> <br>
+	<button name="submit-2" value="submit">Request Registration</button>
+	
+	</form>
+	</div>
+	</div>
+	</div>
+	<div class="space"></div>
+	
+	<script src="js/requestReg.js"></script>
+	<!-- <script> 
+		$(document).ready(function(){
+		  $("button").click(function(){
+			$("div").animate({left: '50px'});
+		  });
+		});
+</script>  -->
+	</body>
+</html>

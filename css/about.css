@@ -1,0 +1,34 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  line-height:1.6;
+  
+  
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 70%;
+}
+
+.flex-item-right {
+  background-color: #55ACEE;
+  padding: 10px;
+  flex: 30%;
+}
+.flex-item-right a {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+.flex-item-left a {
+	text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}

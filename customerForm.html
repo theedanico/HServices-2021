@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+    <html style="font-size: 16px;">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="utf-8">
+            <meta name="keywords" content="Household services, home services, cleaning, shopping, plumbing, hservices">
+            <meta name="description" content="HServices - A platform where householder can find contractors for their problems and vice-versa">
+            <title>CUSTOMER ZONE</title>
+            <link rel="stylesheet" href="css/main.css" media="screen">
+
+            <script class="u-script" type="text/javascript" src="js/jquery.js" defer=""></script>
+            <script class="u-script" type="text/javascript" src="js/main.js" defer=""></script>
+            <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+            <script type="application/ld+json">{
+                    "@context": "http://schema.org",
+                    "@type": "Organization",
+                    "name": "",
+                    "logo": "images/HSERVICES2.png"
+            }</script>
+            <meta name="theme-color" content="#478ac9">
+            <meta property="og:title" content="CUSTOMER">
+            <meta property="og:type" content="website">
+
+            <style>
+               
+                .category{
+                    background-color: rgb(248, 214, 214);
+                    margin-left: 10%;
+                    padding-left: 5%;
+                    height: 200px;
+                    width: 75%
+                }
+                .category p{
+                  
+                    font-size: 175%;
+                    padding-left: 5%;
+                }
+
+                .category select {
+                    font-size: 165%;
+                    padding-left: 2%;
+                    margin-left: 10%;
+                }
+        
+                .payment{
+                    background-color: rgb(248, 214, 214);
+                    margin-left: 10%;
+                    padding-left: 5%;
+                    height: 200px;
+                    width: 75%;
+
+                }
+                
+                .payment span{
+                    font-size: 175%;
+                }
+
+                .payment select {
+                    font-size: 165%;
+                    padding-left: 2%;
+                    
+                }
+
+                .timespan{
+                    background-color: rgb(248, 214, 214);
+                    margin-left: 10%;
+                    padding-left: 5%;
+                    height: 200px;
+                    width: 75%;
+                }
+                
+                .timespan span{
+                    font-size: 175%;
+                }
+
+                .timespan input {
+                    font-size: 165%;
+                    padding-left: 2%;
+                    
+                }
+
+                .info{
+                    background-color: rgb(248, 214, 214);
+                    margin-left: 10%;
+                    padding-left: 5%;
+                    height: 600px;
+                    width: 75%;
+                }
+                .info input {
+                    margin-top: 2%;
+                    font-size: 165%;
+                    padding-left: 2%;
+                    width: 50%;
+                }
+
+                .add{
+                    background-color: rgb(248, 214, 214);
+                    margin-left: 10%;
+                    padding-left: 5%;
+                    height: 320px;
+                    width: 75%;
+                }
+                .add textarea {
+                    width: 50%;
+                    margin-top: 2%;
+                    font-size: 165%;
+                }
+
+            
+                .button button{
+                    background-color: cornflowerblue;
+                    font-size: 165%;
+                    color: cornsilk;
+                    height: 80px;
+                    width: 50%;
+                }
+                .button{
+                    margin-left: 10%;
+                    width: 75%;
+                    height: 300px;
+                    margin-top: 2%;
+                }
+
+                
+                
+
+            </style>
+        </head>
+  
+        <body class="u-body">
+            <header class="u-clearfix u-header u-header" id="sec-e0d7">
+                <div class="u-clearfix u-sheet u-sheet-1">
+                    <a href="#" class="u-image u-logo u-image-1" data-image-width="367" data-image-height="104">
+                         <img src="images/HSERVICES2.png" class="u-logo-image u-logo-image-1">
+                    </a>
+                    <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-radius-50 u-btn-1"> ORDERS</a>
+                    <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-radius-50 u-btn-2"> Log out</a>
+                    
+                    </div>
+                    </header>
+        
+         <form>
+             <div class="category">
+                <h2>Choose the category</h2>
+                <p>Services List</p>
+                <select name="Services">
+                    <option value="one">General cleaning</option>
+                    <option value="two">Plumbing</option>
+                    <option value="three">Electric</option>
+                    <option value="four">Corporate services</option>
+                </select>
+             </div>
+             
+             <div class="payment">
+                <h2>Payment</h2>
+                 <div style="float: left; width: 50%;">
+                     <span>Currency</span>
+                    
+                        <select name="payment">
+                            <option value="dollar">USD</option>
+                            <option value="rouble">P</option>
+                            <option value="Congolese Franc">CDF</option>
+                        </select>
+                 </div>
+                
+             
+                 <div style="float: right; width: 50%;">
+                     <span>Amount</span>
+                    
+                    <input name="amount" type="text">
+                    </div>
+                    <div style="clear: both; font-size: 1px;"></div>
+                 </div>
+             
+             
+             <div class="timespan">
+                <h2>Choose the TimeSpan</h2>
+             <div style="float: left; width: 50%;">
+                 <span>Start</span>
+                 <input name="start" type="datetime-local">
+             </div>
+             <div style="float: right; width: 50%;">
+                 <span>Finish</span>
+                 <input name="Finish" type="datetime-local">
+
+             </div>
+             <div style="clear: both; font-size: 1px;"></div>
+             
+             
+             
+             </div>
+
+             <div class="info">
+                <H2>Personal Information</H2>
+             <input name="firstname" type="text" placeholder="First name"> <br> <br>
+             <input name="lastname" type="text" placeholder="Last name"> <br> <br>
+             <input name="email" type="text" placeholder="Email"> <br> <br>
+             <input name="phone" type="text" placeholder="Phone number"> <br> <br>
+             <input name="state" type="text" placeholder="State"> <br> <br>
+             </div>
+             <div class="add">
+                <h2>Additional information</h2>
+                <textarea rows="4" cols="40" name="additional" placeholder="Text"></textarea> <br>
+             </div>
+             <br>
+             
+
+             
+
+             <div class="button">
+
+                 <div style="float: left; width: 50%;">
+                    <button name="send" type="submit" value="OK"> Send </button>
+                </div>
+
+                <div style="float: right; width: 50%;">
+                    <button name="cancel" type="submit" value="Cancel"> Cancel </button>
+
+                </div>
+                <div style="clear: both; font-size: 1px;"></div>
+
+             </div>
+             
+                
+                
+
+             
+
+            
+             
+
+         </form>           
+        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2bf9"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"> © HServices 2021 All rights reserved<br>This website supports the browsers Google Chrome, Firefox, Safari and Edge.<span style="font-size: 1rem;"></span>
+        </p>
+        </div>
+        </footer>
+        </body>
+        </html>
