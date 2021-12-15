@@ -19,7 +19,7 @@
 	<div class="column"> 
 	
 	<h1 > Registration form for Householder</h1>
-	<form action="requestreg.php" method="post" enctype="multipart/form-data" name="form1" onsubmit="validate()" >
+	<form action="requestreg.php" method="post" enctype="multipart/form-data" name="form1" onsubmit="return validate()" >
 	<label for ="firstname"> Firstname </label>
 	<input name="firstname" type="text" id="firstname"    required /> <br> <br>
 	<label for ="lastname"> Lastname </label>
@@ -36,7 +36,7 @@
 	</div>
 	<div class="column">
 	<h1 >Registration form for Service Provider</h1>
-	<form name="form2" onsubmit = "validateForm2()" action="req.php" method="post" enctype="multipart/form-data">
+	<form name="form2" onsubmit = "return validateForm2()" action="req.php" method="post" enctype="multipart/form-data">
 	<label for ="firstname"> Firstname </label>
 	<input name="firstname" type="text" id="firstName" required /> <br> <br>
 	<label for ="lastname"> Lastname </label>
