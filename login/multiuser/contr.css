@@ -40,11 +40,19 @@ footer {
   display: none;
   color: red;
 }
-#loading
-{
- text-align:center; 
- background: url('user/contractor/loader.gif') no-repeat center; 
- height: 150px;
+
+
+.product {
+	border:1px solid #ccc; 
+	border-radius:5px; 
+	padding:16px; 
+	margin-bottom:16px; 
+	height:250px;
+}
+.serviceSection{
+	height: 180px; 
+	overflow-y: auto; 
+	overflow-x: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,9 +61,7 @@ footer {
     float: right;
     display: block;
   }
-  #hidden_maximum_price{
-	  width: 40%;
-  }
+  
 }
 
 @media screen and (max-width: 600px) {

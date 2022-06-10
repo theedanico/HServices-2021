@@ -41,7 +41,7 @@
 			<li><a href="customer.html">Customer</a></li>
 			<li><a href="contractor.html">Contractor</a></li>
 			<li><a href="about.html">About Us</a></li>
-			<li><a href="login/userlogin.html" class="login">Login</a></li>
+			<li><a href="login/multiuser/loginform.php" class="login">Login</a></li>
 			</ul>
 		</div>
 		</div>
@@ -61,7 +61,7 @@
 	
 	<div class="advantages">
 	<h2 class="text-1">Advantages</h2>
-	<p class="text-2">Become a performer and complete interesting tasks from customers ata convenient time for you.</p>
+	<p class="text-2">Become a performer and complete interesting tasks from customers at a convenient time for you.</p>
 	
 	</div>
 	
@@ -98,13 +98,13 @@ You pay only for responses to tasks and choose your own clients.</p> </div> <div
 	  <div class="space-2"></div>
 	  <h3 class="package">Premuim package</h3>
 	  <p class="package">Unlimited number of responses to orders <br>for 15, 30 or 90 days.</p>
-	  <button type="button" class="package-1">Choose package</button>
+	  <button type="button" class="package-1" onclick = "package();">Choose package</button>
 	  </div>
 	  <div class="column-2 card">
 	  <div class="space-2"></div>
 	  <h3 class="package">Basic package</h3>
 	  <p class="package">Fixed number of responses:<br> 25, 50 or 100. For a period of 30 days.</p>
-	  <button type="button" class="package-1">Choose package</button>
+	  <button type="button" class="package-1" onclick = "package();">Choose package</button>
 	  </div>
 	  </div>
 	  </div>
@@ -118,6 +118,11 @@ You pay only for responses to tasks and choose your own clients.</p> </div> <div
         </p>
 	</footer>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script>
+	function package(){
+		alert("You should wait for your registration request approval first!");
+	}
+	</script>
     
   </body>
 </html>

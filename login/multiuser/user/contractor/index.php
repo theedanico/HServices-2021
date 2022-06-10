@@ -1,4 +1,6 @@
-<?php include 'settings.php'; //include settings ?>
+<?php
+
+ include 'settings.php'; //include settings ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,17 +13,27 @@
 			
 			<script src="js/jquery-1.10.2.min.js"></script>
 			<script src="js/jquery-ui.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			<link rel="stylesheet" href="css/bootstrap.min.css">
+			
+			
 			<link href = "css/jquery-ui.css" rel = "stylesheet">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			
+			
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
+			<script src="filter.js"></script>
+			
 			
             <link rel="stylesheet" href="../../contr.css">
 			
 			
 			<link rel="icon" type="image/x-icon" href="../../../../images/favicon.ico">
 
-            <script class="u-script" type="text/javascript" src="../../../../js/jquery.js" defer=""></script>
+            
             
             <link id="u-theme-google-font" rel="stylesheet" 
 			href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
@@ -47,6 +59,7 @@
 		<a href="#" class="active"><img src="../../../../images/HSERVICES2.png" alt="logo"></a>
 		<a href="#">Profile</a>
 		<a href="#">Orders</a>
+		<a href="../../chats.php">Messages</a>
 		<a href="../../includes/logout.php">Logout</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i>
@@ -57,70 +70,61 @@
  
     
 						<div class="container">
+						<h2 align="center">Services needed!</h2>
+						<?php
+							include 'OrderClass.php';
+							$order = new Order();	
+						?>	
 							<div class="row">
-							 <br />
-							 <h2 align="center">Services needed!</h2>
-							 <br />
+							 
 								<div class="col-md-3">                    
 									<div class="list-group">
-									 <h3>Price</h3>
-									 <input type="hidden" id="hidden_minimum_price" value="0" />
-													<input type="range" id="hidden_maximum_price" value="65000" />
-													<p id="price_show">1000 - 65000</p>
-													<div id="price_range"></div>
-												</div>    
+									<h3>Price</h3>	
+									<div class="list-group-item">
+										<input id="priceSlider" data-slider-id='ex1Slider' type="text" data-slider-min="1000" 
+										data-slider-max="65000" data-slider-step="1" data-slider-value="14"/>
+											<div class="priceRange">1000 - 65000</div>
+												<input type="hidden" id="minPrice" value="0" />
+													<input type="hidden" id="maxPrice" value="65000" />                  
+			</div>			
+		</div>      
 									<div class="list-group">
-						 <h3>Service category</h3>
-										<div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
-						 <?php
-
-										$query = "SELECT DISTINCT Services FROM orders  ORDER BY id DESC";
-										$result = $conn->query($query);
-										$data = $result->fetch_all(MYSQLI_ASSOC);
-										foreach($data as $row)
-										{
-										?>
-										<div class="list-group-item checkbox">
-											<label><input type="checkbox" class="common_selector services" value="<?php echo $row['Services']; ?>"  > <?php echo $row['Services']; ?></label>
-										</div>
-										<?php
-										}
-
-										?>
-										</div>
-									</div>
+									<h3>Services Category</h3>
+									<div class="serviceSection">
+				<?php
+				$Services = $order->getServices();
+				foreach($Services as $serviceDetails){	
+				?>
+				<div class="list-group-item checkbox">
+				<label><input type="checkbox" class="productDetail service" value="<?php echo $serviceDetails["Services"]; ?>"  > <?php echo $serviceDetails["Services"]; ?></label>
+				</div>
+				<?php }	?>
+			</div>
+		</div>
 									
 									
 								
 								<div class="list-group">
-						<h3>State</h3>
-								<?php
-
-								$query = "
-								SELECT DISTINCT state FROM orders  ORDER BY state DESC
-								";
-								$result = $conn->query($query);
-								$data = $result->fetch_all(MYSQLI_ASSOC);
-								foreach($data as $row)
-								{
-								?>
-								<div class="list-group-item checkbox">
-									<label><input type="checkbox" class="common_selector state" value="<?php echo $row['state']; ?>" > <?php echo $row['state']; ?></label>
-								</div>
-								<?php    
-								}
-
-								?>
-							</div> </div>
-							<div class="col-md-9">
-             <br />
-                <div class="row filter_data">
-
-                </div>
-            </div>
+									<h3>State</h3>
+									<div class="stateSection">
+				<?php
+				$state = $order->getState();
+				foreach($state as $stateDetails){	
+				?>
+				<div class="list-group-item checkbox">
+				<label><input type="checkbox" class="productDetail state" value="<?php echo $stateDetails["state"]; ?>"  > <?php echo $stateDetails["state"]; ?></label>
+				</div>
+				<?php }	?>
+			</div>
+		</div> </div>
+					<div class="col-md-9">
+	 <br />
+		<div class="row searchResult">
+		</div>
+	</div>
 			</div></div>
 			
-			<div class="blankspace" id="id-123"></div>
+			
 	
 	
 	<footer>
@@ -128,18 +132,8 @@
 		© HServices 2021 All rights reserved<br>This website supports the browsers Google Chrome, Firefox, Safari and Edge.<span style="font-size: 1rem;"></span>
         </p>
 	</footer>
-	<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
 	
-	<script type="text/javascript" src="js/filter.js"></script>
+	
 			
     
   </body>

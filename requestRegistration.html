@@ -18,7 +18,7 @@
 	<div class="row">
 	<div class="column"> 
 	
-	<h1 > Registration form for Householder</h1>
+	<h1 > Registration form</h1>
 	<form action="requestreg.php" method="post" enctype="multipart/form-data" name="form1" onsubmit="validate()" >
 	<label for ="firstname"> Firstname </label>
 	<input name="firstname" type="text" id="firstname"    required /> <br> <br>
@@ -26,42 +26,27 @@
 	<input name="lastname" type="text" id="lastname"   required /> <br> <br>
 	<label for ="email"> Email address </label>
 	<input name="email" type="text" id="email"  required /> <br> <br>
+	<label for="user_role">Select User Type </label> <br><br>
+	<select name="user_role" required>
+		
+		<option value="contractor">Contractor</option>
+		<option value="householder">Householder</option>
+		</select> <br> <br>
 	<label for ="address"> Address </label>
 	<input name="address" type="text"  required /> <br> <br>
 	<label for ="file"> ID card </label>
 	<input name="file" type="file" accept="image/*, .pdf" required /> <br> <br>
+	
+		
 	<button name="submit" value="submit">Request Registration</button>
 	
 	</form>
 	</div>
-	<div class="column">
-	<h1 >Registration form for Service Provider</h1>
-	<form name="form2" onsubmit = "validateForm2()" action="req.php" method="post" enctype="multipart/form-data">
-	<label for ="firstname"> Firstname </label>
-	<input name="firstname" type="text" id="firstName" required /> <br> <br>
-	<label for ="lastname"> Lastname </label>
-	<input name="lastname" type="text" id="lastName"  required /> <br> <br>
-	<label for ="email"> Email address </label>
-	<input name="email" type="text" id="Email"  required /> <br> <br>
-	<label for ="address"> Address </label>
-	<input name="address" type="text"  required /> <br> <br>
-	<label for ="file"> ID card </label>
-	<input name="file" type="file" accept="image/*, .pdf" required /> <br> <br>
-	<button name="submit-2" value="submit">Request Registration</button>
 	
-	</form>
-	</div>
-	</div>
 	</div>
 	<div class="space"></div>
 	
 	<script src="js/requestReg.js"></script>
-	<!-- <script> 
-		$(document).ready(function(){
-		  $("button").click(function(){
-			$("div").animate({left: '50px'});
-		  });
-		});
-</script>  -->
+	
 	</body>
 </html>

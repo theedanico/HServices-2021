@@ -45,8 +45,9 @@
 
 			<ul id="nav-lists">
 			<li class="close"><span onclick="Hide()">×</span></li>
-			<li><a href="#">Profile</a></li>
+			<li><a href="../../profile.php">Profile</a></li>
 			<li><a href="../../myorder.php"> ORDERS</a></li>
+			<li><a href="../../chats.php">Messages</a></li>
 			<li><a href="../../includes/logout.php">  Logout</a></li>
 			
 			

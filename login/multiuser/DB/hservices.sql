@@ -9,6 +9,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `pass`, `role`) VALUES
 (1, 'Admin', 'admin@admin.com', '202cb962ac59075b964b07152d234b70', 1),
 (2, 'Simple User', 'user@user.com', '202cb962ac59075b964b07152d234b70', 0);
+(3, 'Daniel_admin', 'daniel@hservices.com', '0192023a7bbd73250516f069df18b500', 2);
 
 
 

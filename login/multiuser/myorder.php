@@ -46,7 +46,7 @@
 
 			<ul id="nav-lists">
 			<li class="close"><span onclick="Hide()">×</span></li>
-			<li><a href="#">Profile</a></li>
+			<li><a href="profile.php">Profile</a></li>
 			<li><a href="user/simpleuser/">Create order</a></li>
 			<li><a href="includes/logout.php">  Logout</a></li>
 			

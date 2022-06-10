@@ -42,13 +42,16 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 	$firstname = $_POST['firstname']; 
 	$lastname = $_POST['lastname'];
 	$email = $_POST['email'];
+	$role = $_POST['user_role'];
 	$address = $_POST['address'];
 	
-	$sql = "INSERT into usersReq (firstname, lastname, email, address)
-	VALUES ('$firstname', '$lastname', '$email', '$address')";
+	$sql = "INSERT into requestsReg (firstname, lastname, email, user_role, address)
+	VALUES ('$firstname', '$lastname', '$email', '$role', '$address')";
 	if (mysqli_query($conn, $sql)) {
+		
+		header("refresh:5; url:index.html");
 		 
-		 echo "Your request was send to the admin!";
+		 echo "Your request was send to the admin! ";
      } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
      }
